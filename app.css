@@ -1,0 +1,61 @@
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("mara_andrei.jpg"); /* Ensure the background image is applied */
+  background-size: cover; /* Make the image cover the whole background */
+  background-position: center; /* Center the background image */
+  overflow: hidden;
+}
+
+.app {
+  text-align: center;
+  z-index: 10; /* Ensures the content is displayed above the background */
+}
+
+.hello-kitty {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #d5006e;
+  margin-bottom: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.button--yes {
+  background-color: #d5006e;
+  color: white;
+}
+
+.button--no {
+  background-color: #ff4081;
+  color: white;
+}
+
+/* Add some hover effect for buttons */
+button:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="app">
+      <img src="hello_kitty.jpg" alt="Hello Kitty" class="hello-kitty" />
+      <h1>Do you want to be my Valentine?</h1>
+      <div class="buttonGroup">
+        <button class="button--yes" id="yesBtn">Yes</button>
+        <button class="button--no" id="noBtn">No</button>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("yesBtn").addEventListener("click", function () {
+        window.location.href = "message.html"; // Navigate to message.html when "Yes" is clicked
+      });
+
+      document.getElementById("noBtn").addEventListener("click", function () {
+        const button = document.querySelector(".button--no");
+        button.addEventListener("mouseover", moveHover);
+        button.addEventListener("touchmove", moveHover); // Add touchmove for mobile screens
+
+        function moveHover() {
+          const i = Math.floor(Math.random() * 500) + 1;
+          const j = Math.floor(Math.random() * 500) + 1;
+          button.style.position = "absolute";
+          button.style.left = `${i}px`;
+          button.style.top = `${j}px`;
+        }
+      });
+    </script>
+  </body>
+</html>
